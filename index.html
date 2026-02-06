@@ -30,11 +30,8 @@ p {
   margin: 5px 0;
 }
 a {
-  color: #ffffff;
+  color: #ffffff;  
   text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
 }
 .btn {
   background: #2563eb;
@@ -48,22 +45,27 @@ a:hover {
   background: #1e40af;
 }
 
-/* ---------- Hero Section ---------- */
+/* ---------- Hero Section with Image ---------- */
 .hero {
+  display: flex;
+  flex-wrap: wrap;       /* allows stacking on small screens */
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(135deg, #60a5fa, #3b82f6, #1e40af);
   color: white;
-  text-align: center;
-  padding: 100px 10% 60px 10%;
-  animation: fadeIn 2s ease-in;
+  padding: 60px 10%;
+  gap: 30px;
+  text-align: left;
 }
-.hero h1 {
-  font-size: 2em;
-  margin-bottom: 8px;
+.hero img {
+  width: 275px;
+  height: 275px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
 }
-.hero p {
-  font-size: 1em;
-  opacity: 0.9;
-  margin: 4px 0;
+.hero-text {
+  flex: 1;
 }
 
 /* ---------- Section Cards ---------- */
@@ -106,7 +108,6 @@ a:hover {
   color: white;
 }
 
-
 /* ---------- Animations ---------- */
 @keyframes fadeIn {
   from {opacity: 0; transform: translateY(20px);}
@@ -131,17 +132,16 @@ footer {
     padding: 20px 5%;
   }
   .hero {
-    padding: 80px 5% 40px 5%;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+  }
+  .hero img {
+    width: 120px;
+    height: 120px;
   }
   .project-grid {
     gap: 15px;
-  }
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  nav a {
-    margin: 5px 0;
   }
 }
 </style>
@@ -149,16 +149,18 @@ footer {
 
 <body>
 
-
 <!-- Hero Section -->
 <section class="hero">
-  <h1>Sathmi Devsadini Rajapaksha</h1>
-  <p>Undergraduate | University of Jaffna</p>
-  <p>💡 Passionate about AI, Web Development & Research</p>
-  <p><strong>Email:</strong> devsadini@gmail.com</p>
-  <p><strong>Phone:</strong> 0762394447</p>
-  <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sathmi-rajapaksha/" target="_blank">linkedin.com/in/sathmirajapaksha</a></p>
-  <p><strong>GitHub:</strong> <a href="https://github.com/Sathmi1234" target="_blank">github.com/Sathmi1234</a></p>
+  <img src="Photo.jpg" alt="Sathmi Rajapaksha">
+  <div class="hero-text">
+    <h1>Sathmi Devsadini Rajapaksha</h1>
+    <p>Undergraduate | University of Jaffna</p>
+    <p><strong>Email:</strong> devsadini@gmail.com</p>
+    <p><strong>Phone:</strong> 0762394447</p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sathmi-rajapaksha/" target="_blank">linkedin.com/in/sathmirajapaksha</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/Sathmi1234" target="_blank">github.com/Sathmi1234</a></p>
+    <p>💡 Passionate about Full-Stack Development, ML/AI & Research</p>
+  </div>
 </section>
 
 <!-- About Me -->
@@ -166,8 +168,7 @@ footer {
   <h2>👋 About Me</h2>
   <div class="card">
     <p>Hi! I’m <strong>Sathmi Rajapaksha</strong>, an enthusiastic Information Technology undergraduate at the <strong>University of Jaffna (Vavuniya Campus), Sri Lanka</strong>.</p>
-    <p>I’m passionate about <strong>AI, web technologies, and data-driven systems</strong> that create meaningful change. I love exploring new ideas, conducting research, and developing innovative solutions that bridge technology and everyday life.</p>
-  </div>
+    <p>I’m passionate about <strong>Web development, Full-stack software engineering and Machine Learning</strong>, with a keen interest in creating innovative, data-driven solutions that solve real-world problems. I enjoy exploring emerging technologies, learning new programming languages and frameworks, and applying them to develop efficient and user-friendly applications. I am highly detail-oriented, enjoy debugging and optimizing code, and take pride in building systems that are both functional and maintainable. Alongside technical development, I am motivated by research and continuous learning, striving to understand underlying concepts deeply and to contribute to the broader tech community.</p></div>
 </section>
 
 <!-- Education -->
@@ -176,8 +177,22 @@ footer {
   <div class="card">
     <p><strong>BSc (Hons) in Information Technology</strong></p>
     <p>University of Jaffna, Sri Lanka</p>
-    <p>Key Areas: Software Engineering, Databases, Operating Systems, AI & ML</p>
+    <p>Key Areas: Software Engineering, Databases, Operating Systems, AI & ML, Data Science</p>
+    <p>Current GPA: 3.6</p>
     <p>Expected Graduation: 2026</p>
+  </div>
+  <div class="card">
+    <p><strong>Higher National Diploma in Information Technology</strong></p>
+    <p>SLIIT , Sri Lanka</p>
+    <p>Key Areas: Software Engineering, Mobile Development</p>
+    <p>GPA: 3.3</p>
+    <p>2020 – 2022</p>
+  </div>
+  <div class="card">
+    <p><strong>GCE Advanced Level – Physical Science</strong></p>
+    <p>Holy Cross College, Gampaha </p>
+    <p>Combined Maths – C, Physics – S, Chemistry – S, English – A</p>
+    <p>2007 – 2020</p>
   </div>
 </section>
 
