@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sathmi Rajapaksha | Portfolio</title>
+
+<style>
+/* ---------- General Styles ---------- */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f8fafc;
+  color: #1f2937;
+  margin: 0;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+section {
+  padding: 20px 10%;
+}
+h1, h2, h3 {
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+h1 {
+  font-size: 2em;
+}
+p {
+  font-size: 1em;
+  margin: 5px 0;
+}
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.btn {
+  background: #2563eb;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  display: inline-block;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #1e40af;
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+  background: linear-gradient(135deg, #60a5fa, #3b82f6, #1e40af);
+  color: white;
+  text-align: center;
+  padding: 100px 10% 60px 10%;
+  animation: fadeIn 2s ease-in;
+}
+.hero h1 {
+  font-size: 2em;
+  margin-bottom: 8px;
+}
+.hero p {
+  font-size: 1em;
+  opacity: 0.9;
+  margin: 4px 0;
+}
+
+/* ---------- Section Cards ---------- */
+.card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ---------- Project Grid ---------- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* ---------- Skills ---------- */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.skill {
+  background: #dbeafe;
+  color: #1e3a8a;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.skill:hover {
+  background: #3b82f6;
+  color: white;
+}
+
+
+/* ---------- Animations ---------- */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+.fade {
+  animation: fadeIn 1.2s ease;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1e3a8a;
+  color: white;
+  font-size: 0.9em;
+}
+
+/* ---------- Mobile Responsiveness ---------- */
+@media (max-width: 768px) {
+  section {
+    padding: 20px 5%;
+  }
+  .hero {
+    padding: 80px 5% 40px 5%;
+  }
+  .project-grid {
+    gap: 15px;
+  }
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav a {
+    margin: 5px 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+
+<!-- Hero Section -->
+<section class="hero">
+  <h1>Sathmi Devsadini Rajapaksha</h1>
+  <p>Undergraduate | University of Jaffna</p>
+  <p>💡 Passionate about AI, Web Development & Research</p>
+  <p><strong>Email:</strong> devsadini@gmail.com</p>
+  <p><strong>Phone:</strong> 0762394447</p>
+  <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sathmi-rajapaksha/" target="_blank">linkedin.com/in/sathmirajapaksha</a></p>
+  <p><strong>GitHub:</strong> <a href="https://github.com/Sathmi1234" target="_blank">github.com/Sathmi1234</a></p>
+</section>
+
+<!-- About Me -->
+<section id="about" class="fade">
+  <h2>👋 About Me</h2>
+  <div class="card">
+    <p>Hi! I’m <strong>Sathmi Rajapaksha</strong>, an enthusiastic Information Technology undergraduate at the <strong>University of Jaffna, Sri Lanka</strong>.</p>
+    <p>I’m passionate about <strong>AI, web technologies, and data-driven systems</strong> that create meaningful change. I love exploring new ideas, conducting research, and developing innovative solutions that bridge technology and everyday life.</p>
+  </div>
+</section>
+
+<!-- Education -->
+<section id="education" class="fade">
+  <h2>🎓 Education</h2>
+  <div class="card">
+    <p><strong>BSc (Hons) in Information Technology</strong></p>
+    <p>University of Jaffna, Sri Lanka</p>
+    <p>Key Areas: Software Engineering, Databases, Operating Systems, AI & ML</p>
+    <p>Expected Graduation: 2026</p>
+  </div>
+</section>
+
+<!-- Resume -->
+<section id="resume" class="fade">
+  <h2>📄 Resume</h2>
+  <div class="card">
+    <p>Download my resume for a detailed overview of my academic background, projects, and skills.</p>
+    <a href="https://drive.google.com/file/d/1RAL_EfYputj_E4mwPJ3_0DNVPVlPlUGO/view?usp=drive_link" class="btn" target="_blank" download>Download Resume</a>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="fade">
+  <h2>💡 Projects & Research</h2>
+  <div class="project-grid">
+    <div class="card">
+      <h3>🎓 Student Performance Prediction Web App</h3>
+      <p>A machine learning web app predicting whether a student is likely to pass or fail based on academic and study-related factors.</p>
+      <p><strong>Tech Stack:</strong> Python | Scikit-learn | Streamlit | Pandas</p>
+      <p><strong>Type:</strong> Personal Project</p>
+      <p><a href="https://github.com/Sathmi1234/Student-Performance-Prediction-Web-App" target="_blank" class="btn">View on GitHub</a></p>
+    </div>
+    <div class="card">
+      <h3>🏃‍♀️ ActiveLife – Fitness & Lifestyle Management System</h3>
+      <p><strong>ActiveLife</strong> promotes healthy lifestyle through personalized fitness tracking and goal setting.</p>
+      <p><strong>Tech Stack:</strong> Java | JavaFX | MySQL | CSS</p>
+      <p><a href="https://github.com/Sathmi1234/IT22342024ActiveLife" target="_blank" class="btn">View on GitHub</a></p>
+    </div>
+    <div class="card">
+      <h3>🧠 Calm Nest – Mental Health Chatbot (Concept)</h3>
+      <p>I conceptualized <strong>Calm Nest</strong>, an AI-powered chatbot providing 24/7 emotional support and access to local mental health resources.</p>
+      <p>Presented at <strong>Hack Like a Girl 2.0</strong>, Jetwing Hotel, Colombo.</p>
+      <p><strong>Focus:</strong> NLP, emotional analysis, user support.</p>
+      <p><a href="https://github.com/Sathmi1234/CalmNest_MentalHealthCare" target="_blank" class="btn">View on GitHub</a></p>
+    </div>
+    <div class="card">
+      <h3>🎓 EduLink – University Peer Tutoring Platform</h3>
+      <p>Web-based platform connecting students for peer tutoring, featuring AI-based tutor matching, scheduling, and feedback.</p>
+      <p><strong>Tech Stack:</strong> React | Node.js | MongoDB | Express</p>
+      <p><strong>Role:</strong> Frontend Developer & UI Designer</p>
+      <p><a href="https://github.com/Sathmi1234/EduLink-Peer-Tutoring-App" target="_blank" class="btn">View on GitHub</a></p>
+    </div>
+    <div class="card">
+      <h3>🧬 Ongoing Research</h3>
+      <p>Research on <strong>Comprehensive Analysis of ReLU, Leaky ReLU, ELU, and Swish Activation Functions in Shallow CNNs for Image Classification.</strong> — analyzing accuracy, stability, and convergence.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="fade">
+  <h2>🧩 Skills</h2>
+  <div class="skills">
+    <span class="skill">Java</span>
+    <span class="skill">Python</span>
+    <span class="skill">Streamlit</span>
+    <span class="skill">React.js</span>
+    <span class="skill">Node.js</span>
+    <span class="skill">JavaScript</span>
+    <span class="skill">MySQL</span>
+    <span class="skill">HTML</span>
+    <span class="skill">CSS</span>
+    <span class="skill">GitHub</span>
+    <span class="skill">Figma</span>
+    <span class="skill">Firebase</span>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="fade">
+  <h2>📫 Contact Me</h2>
+  <div class="card contact-info">
+    <p>💬 I’m open to collaborations, research discussions, and opportunities in software development and AI!</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Sathmi Rajapaksha | Designed with 💙.</p>
+</footer>
+
+</body>
+</html>
